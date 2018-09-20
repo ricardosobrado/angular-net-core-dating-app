@@ -78,7 +78,7 @@ namespace tutorials_datinApp.Api.Controllers
             // Encrypt private key
             var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha512Signature);
 
-            // 
+            // Create token
             var tokenDescriptor = new SecurityTokenDescriptor
             {
                 Subject = new ClaimsIdentity(claims),
