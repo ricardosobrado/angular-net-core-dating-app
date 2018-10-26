@@ -32,7 +32,7 @@ namespace tutorials_datinApp.Api.Data
 
         public async Task<IEnumerable<User>> GetUsers()
         {
-            var users = await _context.Users.ToListAsync();
+            var users = await _context.Users.Include(p => p.Photos).ToListAsync();
             return users;
         }
 
